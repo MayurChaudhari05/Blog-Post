@@ -1,0 +1,30 @@
+{
+  "name": "rest",
+  "version": "1.0.0",
+  "description": "",
+  "license": "ISC",
+  "author": "\"sanket\"",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "@aws-sdk/client-dynamodb": "^3.1038.0",
+    "@aws-sdk/lib-dynamodb": "^3.1038.0",
+    "bcrypt": "^6.0.0",
+    "dotenv": "^17.4.2",
+    "ejs": "^3.1.10",
+    "express": "^4.21.1",
+    "express-session": "^1.19.0",
+    "jsonwebtoken": "^9.0.3",
+    "method-override": "^3.0.0",
+    "mysql": "^2.18.1",
+    "mysql2": "^3.11.3",
+    "node": "^24.15.0",
+    "nodemon": "^3.1.7",
+    "serverless-http": "^4.0.0",
+    "uuid": "^10.0.0"
+  },
+  "devDependencies": {}
+}

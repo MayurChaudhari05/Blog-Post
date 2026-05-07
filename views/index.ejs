@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Arima:wght@100..700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/style.css">
+  <title>Posts</title>
+</head>
+
+<body>
+  <section class="main">
+    
+    <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 2px solid #f0f0f0; padding-bottom: 15px; margin-bottom: 20px;">
+      <h1 style="margin: 0;">Quora Posts</h1>
+      <a href="/logout" style="background-color: #ff4c4c; color: white; padding: 8px 16px; border-radius: 5px; font-weight: bold; transition: background-color 0.2s;">Logout</a>
+    </div>
+    <% for(post of posts) { %>
+      <section class="block">
+        <div class="user">
+          <h3>@<%= post.title %></h3>
+        </div>
+        <div class="content">
+          <h4><%= post.content %></h4>
+          <a href="/posts/<%=post.id%>">see in detail</a>
+          
+          <% if(post.user_id === currentUserId) { %>
+              <a href="/posts/<%=post.id%>/edit">edit</a>
+              <form method="post" action="/posts/<%=post.id%>/?_method=DELETE" style="margin: 0;">
+                <button style="background: none; border: none; padding: 0; cursor: pointer; color: #ff4c4c; text-decoration: underline; font-family: inherit;">delete</button>
+              </form>
+          <% } %>
+
+        </div>
+      </section>
+    <% } %>
+    
+    <br><br>
+    <a href="/posts/new">create new</a>
+  </section>
+</body>
+</html>
