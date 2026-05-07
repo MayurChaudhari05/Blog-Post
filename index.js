@@ -12,7 +12,7 @@ const connection = mysql.createConnection({
     host: 'localhost',
     user: 'root',
     database: "blog_db",
-    password: "mayur7499542679"
+    password: "process.env.DB_PASS"
 });
 
 // Connect DB
